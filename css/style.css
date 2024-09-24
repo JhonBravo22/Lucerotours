@@ -9788,3 +9788,6 @@ h6,
   color: var(--primary);           /* Color del texto al pasar el ratón */
   transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza el cambio de color */
 }
+.nowrap {
+  white-space: nowrap;
+}
