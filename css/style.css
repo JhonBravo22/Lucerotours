@@ -9791,3 +9791,6 @@ h6,
 .nowrap {
   white-space: nowrap;
 }
+html {
+    scroll-behavior: smooth;
+}
