@@ -102,14 +102,42 @@
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
+        <style>
+            /* Estilos generales */
+            .carousel-caption img {
+                display: block;
+                margin: 0 auto; /* Centra el logo */
+            }
+    
+            /* Ajustes para pantallas más pequeñas */
+            @media (max-width: 768px) {
+                .carousel-caption img {
+                    height: 50px; /* Reduce el tamaño del logo en móviles */
+                }
+                .carousel-caption h1 {
+                    font-size: 20px; /* Ajusta el tamaño del texto en móviles */
+                }
+            }
+    
+            /* Ajustes para pantallas más grandes */
+            @media (min-width: 768px) {
+                .carousel-caption img {
+                    height: 80px; /* Tamaño del logo en pantallas grandes */
+                }
+                .carousel-caption h1 {
+                    font-size: 30px; /* Tamaño del texto en pantallas grandes */
+                }
+            }
+        </style>
+    
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100" src="img/Lucerotoursimg-5.jpeg" alt="Image" style="height: 600px; object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 500px;">
-                            <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo" style="display: block; margin: 0 auto; height: 80px;">
-                            <h1 class="display-3 text-white mb-md-4" style="font-size: 30px;">Comprometidos con la mejora constante y calidad en nuestro servicio</h1>
+                            <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo">
+                            <h1 class="display-3 text-white mb-md-4">Comprometidos con la mejora constante y calidad en nuestro servicio</h1>
                             <a href="about.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Nosotros</a>
                         </div>
                     </div>
@@ -118,8 +146,8 @@
                     <img class="w-100" src="img/Lucerotoursimg-3.jpeg" alt="Image" style="height: 600px; object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 500px;">
-                            <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo" style="display: block; margin: 0 auto; height: 80px;">
-                            <h1 class="display-3 text-white mb-md-4" style="font-size: 30px;">Servicio de transporte especial</h1>
+                            <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo">
+                            <h1 class="display-3 text-white mb-md-4">Servicio de transporte especial</h1>
                             <a href="service.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Servicios</a>
                         </div>
                     </div>
@@ -128,8 +156,8 @@
                     <img class="w-100" src="img/Lucerotoursimg-1.jpeg" alt="Image" style="height: 600px; object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 500px;">
-                            <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo" style="display: block; margin: 0 auto; height: 80px;">
-                            <h1 class="display-3 text-white mb-md-4" style="font-size: 30px;">Prestamos servicio a nivel nacional</h1>
+                            <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo">
+                            <h1 class="display-3 text-white mb-md-4">Prestamos servicio a nivel nacional</h1>
                             <a href="service.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Servicios</a>
                         </div>
                     </div>
@@ -147,6 +175,7 @@
             </a>
         </div>
     </div>
+    
     
     <!-- Carousel end -->
 
