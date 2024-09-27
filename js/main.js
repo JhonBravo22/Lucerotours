@@ -66,5 +66,16 @@
         }
     });
     
+    $(document).ready(function () {
+        // Smooth scroll for navigation links
+        $('a[href^="#"]').on('click', function (event) {
+            event.preventDefault();
+            const target = this.hash;
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+    });
+    
 })(jQuery);
 
