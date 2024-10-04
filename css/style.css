@@ -9794,3 +9794,6 @@ h6,
 html {
     scroll-behavior: smooth;
 }
+.same-height {
+  min-height: 450px; /* Puedes ajustar esta altura según sea necesario */
+}
