@@ -5872,16 +5872,15 @@ a.close.disabled {
 
 .carousel-item-next,
 .carousel-item-prev {
-    display: block;
     opacity: 0; /* Cambia a 0 inicialmente para evitar ver la imagen antes */
     transform: translateY(100%); /* Mueve el siguiente ítem hacia abajo */
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Añadido */
 }
 
 .carousel-item-next.carousel-item-left,
 .carousel-item-prev.carousel-item-right {
     opacity: 1; /* Se hace visible */
     transform: translateY(0); /* Efecto al entrar */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Añadido */
 }
 
 .carousel-item-next:not(.carousel-item-left),
