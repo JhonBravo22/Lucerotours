@@ -9722,7 +9722,7 @@ html {
     scroll-behavior: smooth;
 }
 .same-height {
-    min-height: 450px; /* Puedes ajustar esta altura según sea necesario */
+    min-height: 350px; /* Puedes ajustar esta altura según sea necesario */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra verticalmente */
