@@ -97,70 +97,106 @@
         </div>
     </div>
     <!-- Navbar End -->
-
-
-    <!-- Header Start -->
-    <div class="container-fluid page-header">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Contact</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact</p>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Contáctenos</h2>
+        <form>
+            <label for="opciones" class="font-weight-bold">Seleccionar tipo de consulta:</label>
+            <select id="opciones" name="opciones" class="form-control" onchange="mostrarFormulario(this.value)">
+                <option value="">Seleccione...</option>
+                <option value="cotizacion">Cotización</option>
+                <option value="informativo">Informativo</option>
+                <option value="pqr">PQR</option>
+            </select>
+    
+            <!-- Formulario para Cotización -->
+            <div id="form-cotizacion" class="mt-4" style="display:none;">
+                <h4>Cotización</h4>
+                <div class="form-group">
+                    <label for="nombre-cotizacion">Nombre o Institución:</label>
+                    <input type="text" id="nombre-cotizacion" name="nombre-cotizacion" class="form-control" required>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contact</h6>
-                <h1>Contact For Any Query</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form bg-white" style="padding: 30px;">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="form-group">
+                    <label for="correo-cotizacion">Correo Electrónico:</label>
+                    <input type="email" id="correo-cotizacion" name="correo-cotizacion" class="form-control" required>
                 </div>
+                <div class="form-group">
+                    <label for="telefono-cotizacion">Número de Teléfono:</label>
+                    <input type="tel" id="telefono-cotizacion" name="telefono-cotizacion" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="punto-recogida">Punto de Recogida:</label>
+                    <input type="text" id="punto-recogida" name="punto-recogida" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="punto-destino">Punto de Destino:</label>
+                    <input type="text" id="punto-destino" name="punto-destino" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-inicial">Fecha y Hora Inicial:</label>
+                    <input type="datetime-local" id="fecha-inicial" name="fecha-inicial" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-final">Fecha y Hora Final:</label>
+                    <input type="datetime-local" id="fecha-final" name="fecha-final" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="cantidad-pasajeros">Cantidad de Pasajeros:</label>
+                    <input type="number" id="cantidad-pasajeros" name="cantidad-pasajeros" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="observaciones">Observaciones:</label>
+                    <textarea id="observaciones" name="observaciones" class="form-control" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Cotización</button>
             </div>
-        </div>
+    
+            <!-- Formulario Informativo -->
+            <div id="form-informativo" class="mt-4" style="display:none;">
+                <h4>Informativo</h4>
+                <div class="form-group">
+                    <label for="nombre-informativo">Nombre:</label>
+                    <input type="text" id="nombre-informativo" name="nombre-informativo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo-informativo">Correo Electrónico:</label>
+                    <input type="email" id="correo-informativo" name="correo-informativo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono-informativo">Número de Teléfono:</label>
+                    <input type="tel" id="telefono-informativo" name="telefono-informativo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="necesidad-informativo">¿Qué necesita?</label>
+                    <textarea id="necesidad-informativo" name="necesidad-informativo" class="form-control" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+            </div>
+    
+            <!-- Formulario PQR -->
+            <div id="form-pqr" class="mt-4" style="display:none;">
+                <h4>PQR</h4>
+                <div class="form-group">
+                    <label for="nombre-pqr">Nombre:</label>
+                    <input type="text" id="nombre-pqr" name="nombre-pqr" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo-pqr">Correo Electrónico:</label>
+                    <input type="email" id="correo-pqr" name="correo-pqr" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono-pqr">Número de Teléfono:</label>
+                    <input type="tel" id="telefono-pqr" name="telefono-pqr" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje-pqr">Mensaje:</label>
+                    <textarea id="mensaje-pqr" name="mensaje-pqr" class="form-control" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar PQR</button>
+            </div>
+        </form>
     </div>
-    <!-- Contact End -->
 
-
+    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 px-sm-3 px-lg-5" style="margin-top: 90px;">
         <div class="row pt-5">
@@ -229,6 +265,23 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <script>
+        function mostrarFormulario(opcion) {
+            // Ocultar todos los formularios
+            document.getElementById('form-cotizacion').style.display = 'none';
+            document.getElementById('form-informativo').style.display = 'none';
+            document.getElementById('form-pqr').style.display = 'none';
+    
+            // Mostrar el formulario correspondiente
+            if (opcion === 'cotizacion') {
+                document.getElementById('form-cotizacion').style.display = 'block';
+            } else if (opcion === 'informativo') {
+                document.getElementById('form-informativo').style.display = 'block';
+            } else if (opcion === 'pqr') {
+                document.getElementById('form-pqr').style.display = 'block';
+            }
+        }
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
