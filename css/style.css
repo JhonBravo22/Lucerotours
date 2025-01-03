@@ -9729,3 +9729,26 @@ html {
     align-items: center;     /* Centra horizontalmente */
     text-align: center;      /* Asegura que el texto esté centrado */
 }
+/* Estilo base personalizado para los enlaces */
+.dropdown-menu a.dropdown-item.custom-link {
+  color: #000 !important; /* Texto negro */
+  font-weight: bold !important; /* Negrita */
+  text-decoration: none !important; /* Quitar subrayado */
+  padding: 10px 15px !important; /* Espaciado interno */
+  display: block !important; /* Ocupa toda la línea */
+  transition: background-color 0.3s ease, color 0.3s ease !important; /* Animación suave */
+}
+
+/* Cambios al pasar el ratón */
+.dropdown-menu a.dropdown-item.custom-link:hover {
+  color: #28a745 !important; /* Verde al pasar el ratón */
+  background-color: #f8f9fa !important; /* Fondo claro al pasar el ratón */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Eliminar estilos heredados no deseados */
+.dropdown-menu a.dropdown-item.custom-link:focus,
+.dropdown-menu a.dropdown-item.custom-link:active {
+  text-decoration: none !important;
+  color: #000 !important; /* Negro */
+}
