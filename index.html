@@ -67,7 +67,7 @@
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" class="navbar-brand">
-                    <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo" style="height: 40px;">
+                    <img src="img/LOGO_LUCERO.png" alt="Lucero Tours Logo" style="height: 82px;">
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -80,10 +80,10 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Servicios</a>
                             <div class="dropdown-menu  bg-light border-0 shadow rounded-3" style="padding-left: 15px; padding-right: 15px;">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalEmpresarial" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#28a745'" onmouseout="this.style.color='black'">Transporte Empresarial</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalTuristico" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#28a745'" onmouseout="this.style.color='black'">Transporte Turístico</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalEscolar" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#28a745'" onmouseout="this.style.color='black'">Transporte Escolar</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalExpreso" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#28a745'" onmouseout="this.style.color='black'">Transporte Expreso</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalEmpresarial" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#7AB730'" onmouseout="this.style.color='black'">Transporte Empresarial</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalTuristico" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#7AB730'" onmouseout="this.style.color='black'">Transporte Turístico</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalEscolar" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#7AB730'" onmouseout="this.style.color='black'">Transporte Escolar</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#infoModalExpreso" style="text-decoration: none; color: black; text-align: center; padding: 10px 0; display: block; margin-bottom: 10px;" onmouseover="this.style.color='#7AB730'" onmouseout="this.style.color='black'">Transporte Expreso</a>
                             </div>
                         </div>
 
@@ -441,6 +441,35 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Obtener el parámetro "modal" de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const modalID = urlParams.get('modal');
+    
+            // Si el parámetro "modal" está presente, intenta abrir el modal
+            if (modalID) {
+                const modalElement = document.getElementById(modalID);
+    
+                // Si el modal existe en la página
+                if (modalElement) {
+                    // Crear instancia del modal y abrirlo
+                    const modalInstance = new bootstrap.Modal(modalElement);
+                    modalInstance.show();
+    
+                    // Elimina el parámetro "modal" de la URL para evitar reapertura
+                    const currentURL = new URL(window.location.href);
+                    currentURL.searchParams.delete('modal');
+                    window.history.replaceState({}, document.title, currentURL.toString());
+    
+                    // Asegurarse de que el modal pueda cerrarse correctamente
+                    modalElement.addEventListener('hidden.bs.modal', () => {
+                        modalInstance.dispose(); // Limpia la instancia del modal
+                    });
+                }
+            }
+        });
+    </script>
 
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
