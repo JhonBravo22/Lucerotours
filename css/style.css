@@ -13,7 +13,7 @@
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
-  --green: #28a745;
+  --green: #7AB730;
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
@@ -21,7 +21,7 @@
   --gray-dark: #343a40;
   --primary: #7AB730;
   --secondary: #f4faec;
-  --success: #28a745;
+  --success: #7AB730;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
@@ -5498,6 +5498,10 @@ a.close.disabled {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  justify-content: center; /* Centra horizontalmente */ 
+  text-align: center !important;
+  margin: 0 auto !important;
+  width: 100% !important;
 }
 
 .modal-body {
