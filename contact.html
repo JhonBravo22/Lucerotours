@@ -145,37 +145,81 @@
                 <label for="telefono-cotizacion">Número de Teléfono:</label>
                 <input type="tel" id="telefono-cotizacion" name="telefono-cotizacion" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="punto-recogida">Punto de Recogida:</label>
+                <input type="text" id="punto-recogida" name="punto-recogida" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="punto-destino">Punto de Destino:</label>
+                <input type="text" id="punto-destino" name="punto-destino" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha-inicial">Fecha y Hora Inicial:</label>
+                <input type="datetime-local" id="fecha-inicial" name="fecha-inicial" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha-final">Fecha y Hora Final:</label>
+                <input type="datetime-local" id="fecha-final" name="fecha-final" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad-pasajeros">Cantidad de Pasajeros:</label>
+                <input type="number" id="cantidad-pasajeros" name="cantidad-pasajeros" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones" class="form-control" rows="4"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary">Enviar Cotización</button>
+        </div>
+
         </form>
 
         <!-- Formulario Informativo -->
         <form id="form-informativo" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST"
             style="display:none;" class="mt-4">
             <h4>Informativo</h4>
-            <div class="form-group">
-                <label for="nombre-informativo">Nombre:</label>
-                <input type="text" id="nombre-informativo" name="nombre-informativo" class="form-control" required>
+                <div class="form-group">
+                    <label for="nombre-informativo">Nombre:</label>
+                    <input type="text" id="nombre-informativo" name="nombre-informativo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo-informativo">Correo Electrónico:</label>
+                    <input type="email" id="correo-informativo" name="correo-informativo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono-informativo">Número de Teléfono:</label>
+                    <input type="tel" id="telefono-informativo" name="telefono-informativo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="necesidad-informativo">¿Qué necesita?</label>
+                    <textarea id="necesidad-informativo" name="necesidad-informativo" class="form-control" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
             </div>
-            <div class="form-group">
-                <label for="correo-informativo">Correo Electrónico:</label>
-                <input type="email" id="correo-informativo" name="correo-informativo" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
         </form>
 
         <!-- Formulario PQR -->
         <form id="form-pqr" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST" style="display:none;"
             class="mt-4">
             <h4>PQR</h4>
-            <div class="form-group">
-                <label for="nombre-pqr">Nombre:</label>
-                <input type="text" id="nombre-pqr" name="nombre-pqr" class="form-control" required>
+                <div class="form-group">
+                    <label for="nombre-pqr">Nombre:</label>
+                    <input type="text" id="nombre-pqr" name="nombre-pqr" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo-pqr">Correo Electrónico:</label>
+                    <input type="email" id="correo-pqr" name="correo-pqr" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono-pqr">Número de Teléfono:</label>
+                    <input type="tel" id="telefono-pqr" name="telefono-pqr" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje-pqr">Mensaje:</label>
+                    <textarea id="mensaje-pqr" name="mensaje-pqr" class="form-control" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar PQR</button>
             </div>
-            <div class="form-group">
-                <label for="correo-pqr">Correo Electrónico:</label>
-                <input type="email" id="correo-pqr" name="correo-pqr" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar PQR</button>
         </form>
     </div>
 
