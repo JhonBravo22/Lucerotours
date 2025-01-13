@@ -7348,16 +7348,7 @@ button.bg-dark:focus {
   margin: 1.5rem !important;
 }
 
-.mt-4{
-  margin: 20px auto; /* Agrega un margen superior e inferior */
-  padding: 20px; /* Espaciado interno */
-  max-width: 500px; /* Limita el ancho del formulario */
-  width: 100%; /* Hace que el ancho sea flexible */
-  background-color: #f8f9fa; /* Color de fondo claro */
-  border: 1px solid #dee2e6; /* Borde sutil */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-}
+.mt-4,
 .my-4 {
   margin-top: 1.5rem !important;
   
