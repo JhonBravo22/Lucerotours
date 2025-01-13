@@ -9756,3 +9756,10 @@ html {
   text-decoration: none !important;
   color: #000 !important; /* Negro */
 }
+form {
+  background: #f8f9fa; /* Fondo claro */
+  border: 1px solid #dee2e6; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
