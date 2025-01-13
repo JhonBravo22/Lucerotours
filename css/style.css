@@ -9756,3 +9756,16 @@ html {
   text-decoration: none !important;
   color: #000 !important; /* Negro */
 }
+form {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+form[style*="display: none;"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+form[style*="display: block;"] {
+  opacity: 1;
+  visibility: visible;
+}
