@@ -121,105 +121,64 @@
     <!-- Navbar End -->
     <div class="container mt-5">
         <h2 class="text-center mb-4">Contactos</h2>
-        <form action="https://formsubmit.co/3bravooo3@gmail.com" method="POST">
-            <label for="opciones" class="font-weight-bold">Seleccionar tipo de consulta:</label>
-            <select id="opciones" name="opciones" class="form-control" onchange="mostrarFormulario(this.value)">
-                <option value="">Seleccione...</option>
-                <option value="cotizacion">Cotización</option>
-                <option value="informativo">Informativo</option>
-                <option value="pqr">PQR</option>
-            </select>
+        <label for="opciones" class="font-weight-bold">Seleccionar tipo de consulta:</label>
+        <select id="opciones" name="opciones" class="form-control" onchange="mostrarFormulario(this.value)">
+            <option value="">Seleccione...</option>
+            <option value="cotizacion">Cotización</option>
+            <option value="informativo">Informativo</option>
+            <option value="pqr">PQR</option>
+        </select>
 
-            <!-- Formulario para Cotización -->
-            <div id="form-cotizacion" class="mt-4" style="display:none;">
-                <h4>Cotización</h4>
-                <div class="form-group">
-                    <label for="nombre-cotizacion">Nombre o Institución:</label>
-                    <input type="text" id="nombre-cotizacion" name="nombre-cotizacion" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="correo-cotizacion">Correo Electrónico:</label>
-                    <input type="email" id="correo-cotizacion" name="correo-cotizacion" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono-cotizacion">Número de Teléfono:</label>
-                    <input type="tel" id="telefono-cotizacion" name="telefono-cotizacion" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="punto-recogida">Punto de Recogida:</label>
-                    <input type="text" id="punto-recogida" name="punto-recogida" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="punto-destino">Punto de Destino:</label>
-                    <input type="text" id="punto-destino" name="punto-destino" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="fecha-inicial">Fecha y Hora Inicial:</label>
-                    <input type="datetime-local" id="fecha-inicial" name="fecha-inicial" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="fecha-final">Fecha y Hora Final:</label>
-                    <input type="datetime-local" id="fecha-final" name="fecha-final" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="cantidad-pasajeros">Cantidad de Pasajeros:</label>
-                    <input type="number" id="cantidad-pasajeros" name="cantidad-pasajeros" class="form-control"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="observaciones">Observaciones:</label>
-                    <textarea id="observaciones" name="observaciones" class="form-control" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar Cotización</button>
+        <!-- Formulario para Cotización -->
+        <form id="form-cotizacion" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST"
+            style="display:none;" class="mt-4">
+            <h4>Cotización</h4>
+            <div class="form-group">
+                <label for="nombre-cotizacion">Nombre o Institución:</label>
+                <input type="text" id="nombre-cotizacion" name="nombre-cotizacion" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="correo-cotizacion">Correo Electrónico:</label>
+                <input type="email" id="correo-cotizacion" name="correo-cotizacion" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono-cotizacion">Número de Teléfono:</label>
+                <input type="tel" id="telefono-cotizacion" name="telefono-cotizacion" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Cotización</button>
+        </form>
 
-            <!-- Formulario Informativo -->
-            <div id="form-informativo" class="mt-4" style="display:none;">
-                <h4>Informativo</h4>
-                <div class="form-group">
-                    <label for="nombre-informativo">Nombre:</label>
-                    <input type="text" id="nombre-informativo" name="nombre-informativo" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="correo-informativo">Correo Electrónico:</label>
-                    <input type="email" id="correo-informativo" name="correo-informativo" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono-informativo">Número de Teléfono:</label>
-                    <input type="tel" id="telefono-informativo" name="telefono-informativo" class="form-control"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="necesidad-informativo">¿Qué necesita?</label>
-                    <textarea id="necesidad-informativo" name="necesidad-informativo" class="form-control"
-                        rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+        <!-- Formulario Informativo -->
+        <form id="form-informativo" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST"
+            style="display:none;" class="mt-4">
+            <h4>Informativo</h4>
+            <div class="form-group">
+                <label for="nombre-informativo">Nombre:</label>
+                <input type="text" id="nombre-informativo" name="nombre-informativo" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="correo-informativo">Correo Electrónico:</label>
+                <input type="email" id="correo-informativo" name="correo-informativo" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+        </form>
 
-            <!-- Formulario PQR -->
-            <div id="form-pqr" class="mt-4" style="display:none;">
-                <h4>PQR</h4>
-                <div class="form-group">
-                    <label for="nombre-pqr">Nombre:</label>
-                    <input type="text" id="nombre-pqr" name="nombre-pqr" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="correo-pqr">Correo Electrónico:</label>
-                    <input type="email" id="correo-pqr" name="correo-pqr" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono-pqr">Número de Teléfono:</label>
-                    <input type="tel" id="telefono-pqr" name="telefono-pqr" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje-pqr">Mensaje:</label>
-                    <textarea id="mensaje-pqr" name="mensaje-pqr" class="form-control" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar PQR</button>
+        <!-- Formulario PQR -->
+        <form id="form-pqr" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST" style="display:none;"
+            class="mt-4">
+            <h4>PQR</h4>
+            <div class="form-group">
+                <label for="nombre-pqr">Nombre:</label>
+                <input type="text" id="nombre-pqr" name="nombre-pqr" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="correo-pqr">Correo Electrónico:</label>
+                <input type="email" id="correo-pqr" name="correo-pqr" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar PQR</button>
         </form>
     </div>
+
 
 
     <!-- Footer Start -->
@@ -298,23 +257,17 @@
     <script src="mail/contact.js"></script>
     <script>
         function mostrarFormulario(opcion) {
-            // Ocultar todos los formularios y desactivar 'required'
-            const forms = ['form-cotizacion', 'form-informativo', 'form-pqr'];
-            forms.forEach(formId => {
-                const form = document.getElementById(formId);
-                form.style.display = 'none';
-                const inputs = form.querySelectorAll('[required]');
-                inputs.forEach(input => input.required = false); // Desactiva 'required'
-            });
+            // Ocultar todos los formularios
+            document.getElementById("form-cotizacion").style.display = "none";
+            document.getElementById("form-informativo").style.display = "none";
+            document.getElementById("form-pqr").style.display = "none";
 
-            // Mostrar el formulario correspondiente y activar 'required'
+            // Mostrar el formulario seleccionado
             if (opcion) {
-                const selectedForm = document.getElementById(`form-${opcion}`);
-                selectedForm.style.display = 'block';
-                const inputs = selectedForm.querySelectorAll('[required]');
-                inputs.forEach(input => input.required = true); // Activa 'required'
+                document.getElementById(`form-${opcion}`).style.display = "block";
             }
         }
+
     </script>
 
 
