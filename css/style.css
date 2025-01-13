@@ -9763,3 +9763,33 @@ form {
   padding: 20px; /* Espaciado interno */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
+.form-informativo {
+  margin: 20px auto; /* Agrega un margen superior e inferior */
+  padding: 20px; /* Espaciado interno */
+  max-width: 500px; /* Limita el ancho del formulario */
+  width: 100%; /* Hace que el ancho sea flexible */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  border: 1px solid #dee2e6; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+.form-pqr {
+  margin: 20px auto; /* Agrega un margen superior e inferior */
+  padding: 20px; /* Espaciado interno */
+  max-width: 500px; /* Limita el ancho del formulario */
+  width: 100%; /* Hace que el ancho sea flexible */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  border: 1px solid #dee2e6; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+.form-cotizacion {
+  margin: 20px auto; /* Agrega un margen superior e inferior */
+  padding: 20px; /* Espaciado interno */
+  max-width: 500px; /* Limita el ancho del formulario */
+  width: 100%; /* Hace que el ancho sea flexible */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  border: 1px solid #dee2e6; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
