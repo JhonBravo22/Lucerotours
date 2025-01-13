@@ -171,59 +171,59 @@
             </div>
             <button type="submit" class="btn btn-primary">Enviar Cotización</button>
             <input type="hidden" name="_next" value="https://jhonbravo22.github.io/Lucerotours/index.html">
+    </div>
+
+    </form>
+
+    <!-- Formulario Informativo -->
+    <form id="form-informativo" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST" style="display:block;"
+        class="mt-4">
+        <h4>Informativo</h4>
+        <div class="form-group">
+            <label for="nombre-informativo">Nombre:</label>
+            <input type="text" id="nombre-informativo" name="nombre-informativo" class="form-control" required>
         </div>
+        <div class="form-group">
+            <label for="correo-informativo">Correo Electrónico:</label>
+            <input type="email" id="correo-informativo" name="correo-informativo" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono-informativo">Número de Teléfono:</label>
+            <input type="tel" id="telefono-informativo" name="telefono-informativo" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="necesidad-informativo">¿Qué necesita?</label>
+            <textarea id="necesidad-informativo" name="necesidad-informativo" class="form-control" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+        <input type="hidden" name="_next" value="https://jhonbravo22.github.io/Lucerotours/index.html">
+        </div>
+    </form>
 
-        </form>
-
-        <!-- Formulario Informativo -->
-        <form id="form-informativo" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST"
-            style="display:block;" class="mt-4">
-            <h4>Informativo</h4>
-                <div class="form-group">
-                    <label for="nombre-informativo">Nombre:</label>
-                    <input type="text" id="nombre-informativo" name="nombre-informativo" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="correo-informativo">Correo Electrónico:</label>
-                    <input type="email" id="correo-informativo" name="correo-informativo" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono-informativo">Número de Teléfono:</label>
-                    <input type="tel" id="telefono-informativo" name="telefono-informativo" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="necesidad-informativo">¿Qué necesita?</label>
-                    <textarea id="necesidad-informativo" name="necesidad-informativo" class="form-control" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
-                <input type="hidden" name="_next" value="https://jhonbravo22.github.io/Lucerotours/index.html">
-            </div>
-        </form>
-
-        <!-- Formulario PQR -->
-        <form id="form-pqr" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST" style="display:block;"
-            class="mt-4">
-            <h4>PQR</h4>
-                <div class="form-group">
-                    <label for="nombre-pqr">Nombre:</label>
-                    <input type="text" id="nombre-pqr" name="nombre-pqr" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="correo-pqr">Correo Electrónico:</label>
-                    <input type="email" id="correo-pqr" name="correo-pqr" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono-pqr">Número de Teléfono:</label>
-                    <input type="tel" id="telefono-pqr" name="telefono-pqr" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje-pqr">Mensaje:</label>
-                    <textarea id="mensaje-pqr" name="mensaje-pqr" class="form-control" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar PQR</button>
-                <input type="hidden" name="_next" value="https://jhonbravo22.github.io/Lucerotours/index.html">
-            </div>
-        </form>
+    <!-- Formulario PQR -->
+    <form id="form-pqr" action="https://formsubmit.co/3bravooo3@gmail.com" method="POST" style="display:block;"
+        class="mt-4">
+        <h4>PQR</h4>
+        <div class="form-group">
+            <label for="nombre-pqr">Nombre:</label>
+            <input type="text" id="nombre-pqr" name="nombre-pqr" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="correo-pqr">Correo Electrónico:</label>
+            <input type="email" id="correo-pqr" name="correo-pqr" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono-pqr">Número de Teléfono:</label>
+            <input type="tel" id="telefono-pqr" name="telefono-pqr" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje-pqr">Mensaje:</label>
+            <textarea id="mensaje-pqr" name="mensaje-pqr" class="form-control" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar PQR</button>
+        <input type="hidden" name="_next" value="https://jhonbravo22.github.io/Lucerotours/index.html">
+        </div>
+    </form>
     </div>
 
 
@@ -312,6 +312,13 @@
             // Mostrar el formulario seleccionado
             if (opcion) {
                 document.getElementById(`form-${opcion}`).style.display = "block";
+            }
+            if (opcionSeleccionada === 'cotizacion') {
+                document.getElementById('form-cotizacion').style.display = 'block';
+            } else if (opcionSeleccionada === 'informativo') {
+                document.getElementById('form-informativo').style.display = 'block';
+            } else if (opcionSeleccionada === 'pqr') {
+                document.getElementById('form-pqr').style.display = 'block';
             }
         }
 
