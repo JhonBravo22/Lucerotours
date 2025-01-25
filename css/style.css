@@ -11043,8 +11043,6 @@ html {
 
 .carousel-inner img {
   width: 100%;          /* Ocupa todo el ancho del contenedor */
-  height: auto;         /* Ajusta automáticamente la altura */
-  object-fit: cover;    /* Mantiene el recorte sin deformar la imagen */
   max-height: 600px;    /* Límite opcional para evitar que crezcan demasiado */
 }
 
