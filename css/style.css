@@ -11043,7 +11043,7 @@ html {
 
 .carousel-inner img {
   width: 100%;          /* Ocupa todo el ancho del contenedor */
-  height: 600px;    /* Límite opcional para evitar que crezcan demasiado */
+  height: 500px;    /* Límite opcional para evitar que crezcan demasiado */
   object-fit: cover;
 }
 
