@@ -11106,3 +11106,32 @@ html {
   opacity: 1;
   transform: translateX(0);
 }
+
+
+.gallery img {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery img:nth-child(1) {
+  animation: fade 20s infinite;
+}
+.gallery img:nth-child(2) {
+  animation: fade 20s infinite 5s;
+}
+.gallery img:nth-child(3) {
+  animation: fade 20s infinite 10s;
+}
+.gallery img:nth-child(4) {
+  animation: fade 20s infinite 15s;
+}
+
+@keyframes fade {
+  0%, 20%, 100% {
+    opacity: 0;
+  }
+  50%, 80% {
+    opacity: 1;
+  }
+}
